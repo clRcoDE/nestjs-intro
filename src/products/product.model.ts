@@ -1,5 +1,4 @@
 import * as mongoose from 'mongoose'
-import { Interface } from 'readline'
 
 const ProductSchema = new mongoose.Schema({
 
