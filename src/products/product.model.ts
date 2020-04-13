@@ -1,9 +1,21 @@
-export class Product {
+import * as mongoose from 'mongoose'
+import { Interface } from 'readline'
 
-    constructor(
-        public id: string,
-        public title: string,
-        public desc: string,
-        public price: number
-    ) { }
+const ProductSchema = new mongoose.Schema({
+
+    title: { type: String, required: true },
+    description: { type: String, required: true },
+    price: { type: Number, required: true }
+
+})
+
+interface Product extends mongoose.Document {
+
+    id: string;
+    title: string;
+    description: string;
+    price: number
 }
+
+
+export { ProductSchema, Product }
